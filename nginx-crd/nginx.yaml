@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-crd
+  namespace: nginx-crd
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx-crd
+  template:
+    metadata:
+      labels:
+        app: nginx-crd
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
