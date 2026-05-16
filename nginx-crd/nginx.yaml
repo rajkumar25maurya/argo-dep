@@ -4,7 +4,7 @@ metadata:
   name: nginx-crd-app
   namespace: nginx-crd
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: nginx-crd-app
