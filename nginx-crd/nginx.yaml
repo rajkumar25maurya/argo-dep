@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-crd
+  name: nginx-crd-app
   namespace: nginx-crd
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: nginx-crd
+      app: nginx-crd-app
   template:
     metadata:
       labels:
-        app: nginx-crd
+        app: nginx-crd-app
     spec:
       containers:
       - name: nginx
